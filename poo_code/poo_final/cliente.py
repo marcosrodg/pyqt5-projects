@@ -1,0 +1,62 @@
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_cadastro_cliente(object):
+    def setupUi(self, cadastro_cliente):
+        cadastro_cliente.setObjectName("cadastro_cliente")
+        cadastro_cliente.resize(851, 600)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(cadastro_cliente.sizePolicy().hasHeightForWidth())
+        cadastro_cliente.setSizePolicy(sizePolicy)
+        cadastro_cliente.setStyleSheet("background-color: rgb(114, 159, 207);")
+        self.centralwidget = QtWidgets.QWidget(cadastro_cliente)
+        self.centralwidget.setObjectName("centralwidget")
+        self.ln_name_cliente = QtWidgets.QLineEdit(self.centralwidget)
+        self.ln_name_cliente.setGeometry(QtCore.QRect(100, 60, 621, 41))
+        self.ln_name_cliente.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.ln_name_cliente.setObjectName("ln_name_cliente")
+        self.ln_cpf_cliente = QtWidgets.QLineEdit(self.centralwidget)
+        self.ln_cpf_cliente.setGeometry(QtCore.QRect(100, 140, 621, 41))
+        self.ln_cpf_cliente.setObjectName("ln_cpf_cliente")
+        self.bt_add_cliente = QtWidgets.QPushButton(self.centralwidget)
+        self.bt_add_cliente.setGeometry(QtCore.QRect(90, 250, 271, 41))
+        self.bt_add_cliente.setObjectName("bt_add_cliente")
+        self.bt_del_cliente = QtWidgets.QPushButton(self.centralwidget)
+        self.bt_del_cliente.setGeometry(QtCore.QRect(470, 250, 251, 41))
+        self.bt_del_cliente.setObjectName("bt_del_cliente")
+        self.bt_edt_cliente = QtWidgets.QPushButton(self.centralwidget)
+        self.bt_edt_cliente.setGeometry(QtCore.QRect(300, 330, 271, 41))
+        self.bt_edt_cliente.setObjectName("bt_edt_cliente")
+        self.lb_retorno = QtWidgets.QLabel(self.centralwidget)
+        self.lb_retorno.setGeometry(QtCore.QRect(260, 410, 341, 41))
+        font = QtGui.QFont()
+        font.setFamily("Ubuntu Condensed")
+        font.setPointSize(13)
+        font.setItalic(True)
+        self.lb_retorno.setFont(font)
+        self.lb_retorno.setText("")
+        self.lb_retorno.setAlignment(QtCore.Qt.AlignCenter)
+        self.lb_retorno.setOpenExternalLinks(False)
+        self.lb_retorno.setObjectName("lb_retorno")
+        self.bt_voltar_cliente = QtWidgets.QPushButton(self.centralwidget)
+        self.bt_voltar_cliente.setGeometry(QtCore.QRect(20, 540, 101, 31))
+        self.bt_voltar_cliente.setStyleSheet("background-color: rgb(173, 127, 168);")
+        self.bt_voltar_cliente.setObjectName("bt_voltar_cliente")
+        cadastro_cliente.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(cadastro_cliente)
+        QtCore.QMetaObject.connectSlotsByName(cadastro_cliente)
+
+    def retranslateUi(self, cadastro_cliente):
+        _translate = QtCore.QCoreApplication.translate
+        cadastro_cliente.setWindowTitle(_translate("cadastro_cliente", "MainWindow"))
+        self.ln_name_cliente.setPlaceholderText(_translate("cadastro_cliente", "        NOME DO CLIENTE"))
+        self.ln_cpf_cliente.setPlaceholderText(_translate("cadastro_cliente", "         CPF ex: 13825600611"))
+        self.bt_add_cliente.setText(_translate("cadastro_cliente", "ADICIONAR CLIENTE"))
+        self.bt_del_cliente.setText(_translate("cadastro_cliente", "REMOVER CLIENTE"))
+        self.bt_edt_cliente.setText(_translate("cadastro_cliente", "EDITAR CLIENTE"))
+        self.bt_voltar_cliente.setText(_translate("cadastro_cliente", "voltar"))

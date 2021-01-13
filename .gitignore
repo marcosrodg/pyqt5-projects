@@ -123,3 +123,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+poo_code/projetos-pytho-pyqt5/
+poo_code/.idea/inspectionProfiles/profiles_settings.xml
+*.iml
+*.xml
